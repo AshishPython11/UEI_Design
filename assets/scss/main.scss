@@ -1,0 +1,216 @@
+// Functions first
+@import "bootstrap/functions";
+
+// Variable overrides second
+$primary: #9943EC;
+$secondary: #1E1E1E;
+$warning: #FFD700;
+$success: #489D48;
+$enable-shadows: true;
+$prefix: "-";
+$stroke-100: #D0D5DC;
+$gray2: #80818C;
+$gray3: #707070;
+
+$body-bg: #FAF5FE;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// Required Bootstrap imports
+@import "bootstrap/variables";
+@import "bootstrap/variables-dark";
+@import "bootstrap/maps";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+
+// Optional components
+@import "bootstrap/utilities";
+@import "bootstrap/reboot";
+@import "bootstrap/containers";
+@import "bootstrap/grid";
+@import "bootstrap/helpers";
+@import "bootstrap/utilities/api";
+@import "bootstrap/buttons";
+@import "bootstrap/dropdown";
+@import "bootstrap/card";
+@import "bootstrap/offcanvas";
+@import "bootstrap/close";
+@import "bootstrap/list-group";
+@import "bootstrap/forms/form-control";
+@import "bootstrap/forms/form-check";
+
+a{
+  text-decoration: none;
+}
+
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.inter-500 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+.inter-600 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+body.without-login {
+  background-color: $body-bg;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+.fs-14{
+  font-size: 14px;
+}
+.login-textslider {
+  background-color: rgba(0, 0, 0, 3%);
+
+  border-radius: $border-radius-xl;
+
+  .login-slider-card {
+    padding: 1.5rem;
+    p{
+      margin-bottom: 2rem;
+    }
+  }
+ 
+}
+
+.seprator {
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 0 1rem;
+    color: $gray2;
+    font-weight: 500;
+  }
+
+  &::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: $stroke-100;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  &::before {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: $stroke-100;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+}
+.outsecbtn{
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  justify-content: center;
+  border-radius: 50px;
+  font-weight: 600;
+  width: 100%;
+
+  &:hover{
+    background-color: rgba($gray2, 0.2);
+    color: $secondary;
+  }
+}
+
+.access-card{
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: $border-radius-xl;
+  height: 100%;
+  max-width: 550px;
+  margin: 0 auto ;
+  box-shadow: $box-shadow;
+  
+}
+.phone-btn{
+  position: absolute;
+  top: 0px;
+  right: 0rem;
+  padding: 14px;
+  cursor: pointer;
+}
+.h-52{
+  height: 52px;
+}
+.btn{
+  min-height: 52px;
+  line-height: 37px;
+}
+.swiper-pagination{
+  text-align: start!important;
+  padding-left: 1.2rem!important;
+  bottom: 20px!important;
+  .swiper-pagination-bullet-active{
+    width: 30px!important;
+    border-radius: 20px!important;
+    background-color: $primary;
+  }
+}
+@media (max-width:1024px){
+  .access-card{
+    
+    box-shadow: none;
+    padding: .4rem;
+    background: url('../images/mobile-effect.jpg'), white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  }
+  body.without-login {
+    background-color: white!important;
+  }
+  
+}
+.form-label{
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 7px;
+}
+
+
+.otp-container {
+  display: flex;
+  gap: 10px;
+
+  .otp-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+}
+
