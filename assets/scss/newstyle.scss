@@ -5,14 +5,15 @@
 $primary: #9943EC;
 //$secondary: #1E1E1E;
 $warning: #FFD700;
-$success: #489D48;
+$success: #ABE206;
+$danger: #FF6D68;
 //$enable-shadows: true;
 //$prefix: "gs-";
 $stroke-100: #D0D5DC;
 $gray2: #80818C;
 $gray3: #707070;
 $without-login: #FAF5FE;
-
+$bg-gray: #F5F5F5;
 
 
 // //Required Bootstrap imports
@@ -57,9 +58,10 @@ $without-login: #FAF5FE;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-body{
+body {
   font-family: "Inter", system-ui;
 }
+
 a {
   text-decoration: none;
 }
@@ -203,22 +205,81 @@ img {
     background-color: $primary;
   }
 }
-@media   (max-width:1366px){
- body .desk-chat-wrapper .chatroboimg{
-    max-width: 92px!important;
-  }
-}
-@media (max-width:1024px) {
 
-  .chat-content-leftside .chat-left-msg, .chat-content-rightside .chat-right-msg{
-    max-width: 220px!important;
+@media (max-width:1366px) {
+
+ 
+  body .desk-chat-wrapper .chatroboimg {
+    max-width: 92px !important;
   }
-  .ansfooter li span{
-    display: none!important;
+ 
+}
+
+@media (max-width:1024px) {
+  .progress-line{
+    left: 4%!important;
+    transform: translateX(-4%)!important;
   }
-  .chatroboimg{
+  .wizard-content .form-control, .wizard-content .form-select{
+    background-color: white!important;
+  }
+  .wizard-sidebar{
+    padding: 0 0 1rem !important;
+    border-right: 0!important;
+  }
+  .bg-transparent-mb{
+    background-color: transparent!important;
+    box-shadow: none!important;
+  }
+  .wizard-content{
+    padding: 0rem!important;
+  }
+  .multiselectdrop button{
+    background-color: white!important;
+  }
+  .steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .progress-background{
+      width: 100%!important;
+      height: 2px!important;
+      top: 50%!important;
+      left: 0!important;
+      transform: translateY(-50%);
+      transform: translateX(0%)!important;
+    }
+    .step {
+      margin-bottom: 0 !important;
+
+      .step-label {
+        display: none;
+      }
+    }
+  }
+  .myform-wizard{
+    display: flex;
+    flex-wrap: wrap;
+    .wizard-sidebar{
+      width: 100%!important;
+    }
+    .wizard-content{
+      width: 100%!important;
+    }
+  }
+  .chat-content-leftside .chat-left-msg,
+  .chat-content-rightside .chat-right-msg {
+    max-width: 220px !important;
+  }
+
+  .ansfooter li span {
+    display: none !important;
+  }
+
+  .chatroboimg {
     max-width: 60px;
   }
+
   .access-card {
 
     box-shadow: none;
@@ -1352,4 +1413,287 @@ img {
     height: 360px
   }
 
+}
+
+
+// form wizard
+
+.wizard-sidebar {
+
+  padding: 1.5rem;
+
+  position: sticky;
+  top: 0;
+  height: 100%;
+  border-right: 1px solid rgba($primary, 0.15);
+}
+
+.steps-container {
+  position: relative;
+
+  height: 100%; // Ensure the container covers the full height
+
+  .progress-background {
+    position: absolute;
+    top: 0;
+    left: 6.5%;
+    width: 2px;
+    background-color: rgba($primary, 0.2);
+    height: 100%;
+    z-index: 1;
+    max-height: 335px;
+    transform: translateX(-6.5%);
+  }
+
+  .progress-line {
+    position: absolute;
+    top: 0;
+    left: 6.5%;
+    width: 2px;
+    background-color: $secondary;
+    z-index: 2;
+    transition: height 0.3s;
+    transform: translateX(-6.5%);
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active .step-circle {
+      border: 2px solid $secondary;
+      color: #fff;
+    }
+
+    .step-circle {
+      width: 32px;
+      height: 32px;
+      border: 2px solid rgba($primary, 0.2);
+      color: #fff;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      z-index: 3;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: -1;
+        transition: height 0.3s;
+        height: 0;
+      }
+
+      &.filled {
+        border: 3px solid $secondary;
+
+        i {
+          color: $secondary;
+          font-size: 18px;
+          font-weight: 900;
+        }
+      }
+
+      &.filled::before {
+        height: 100%;
+      }
+    }
+
+    .step-label {
+      margin-left: 15px;
+
+      font-size: 14px;
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      width: 2px;
+      height: calc(100% - 40px);
+      background-color: #6c757d;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+}
+
+.wizard-content {
+  .col-form-label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .form-control,
+  .form-select {
+    background-color: $bg-gray;
+    border-color: $bg-gray;
+  }
+
+  padding: 1.3rem;
+
+  .form-step {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .progress-bar {
+    margin-top: 5px;
+    height: 28px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px;
+
+    .progress {
+      height: 100%;
+      background-color: $primary;
+      width: 0;
+      transition: width 0.3s;
+    }
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-7px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(7px);
+  }
+}
+
+.toast.shake {
+  animation: shake .7s ease-in-out;
+}
+
+
+.image-container {
+  display: flex;
+  gap: 20px;
+
+  .image-box {
+    position: relative;
+    display: inline-block;
+
+    .image-checkbox {
+      display: none; // Hide the actual checkbox
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3s ease; // Smooth transition for border
+
+
+    }
+
+    .check-icon {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 20px;
+      color: black;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      width: 28px;
+      height: 28px;
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    // When the checkbox is checked, apply these styles
+
+
+    .image-checkbox:checked~.check-icon {
+      display: flex;
+    }
+  }
+}
+
+.multiselectdrop {
+  width: 100%;
+
+  button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $bg-gray;
+    color: #000;
+
+    &::after {
+      margin-left: auto;
+      float: right;
+    }
+  }
+}
+
+.border-primary {
+  border: 1px solid rgba($primary, 0.15) !important;
+}
+.myform-wizard{
+  display: flex;
+  
+  .wizard-sidebar{
+    width: 290px;
+  }
+  .wizard-content{
+    width: calc(100% - 290px);
+  }
+}
+.upload-profile-image{
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba($primary, 0.15);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  i{
+    font-size: 30px;
+  }
 }
