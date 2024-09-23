@@ -490,7 +490,7 @@ $dropdownAnimation: .6s cubic-bezier(.25, .8, .25, 1) 0s normal forwards 1 animd
   /* Metis Menu */
 
   $menuLink_Color: #5f5f5f;
-  $menuLink_Hover_Color: #008cff;
+  $menuLink_Hover_Color: $primary;
   $menu_lable_color: #b0afaf;
   $menu_bg_color: rgb(0 140 255 / 5%);
   $border-color_1: initial;
@@ -1155,7 +1155,7 @@ form select.error:focus {
 
 .alert-border-primary {
   border: 1px solid var(--bs-gray-400);
-  border-left: 5px solid #008cff;
+  border-left: 5px solid $primary;
 }
 
 .alert-border-secondary {
@@ -1651,7 +1651,7 @@ form select.error:focus {
 
 .chat-tab-menu .nav-pills .nav-link.active,
 .chat-tab-menu .nav-pills .show>.nav-link {
-  color: #008cff;
+  color: $primary;
   background-color: rgb(0 123 255 / 0%);
 }
 
@@ -1754,7 +1754,7 @@ form select.error:focus {
       }
 
       &:hover {
-        background: #008cff;
+        background: $primary;
         color: #fff;
         transition: all .2s ease-out;
       }
