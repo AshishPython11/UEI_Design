@@ -2320,3 +2320,28 @@ img {
     }
   }
 }
+
+
+//accordion design
+.accordion-item:not(:first-of-type){
+  border-top: 1px solid  rgba(91, 97, 102, 0.2)!important;
+}
+.accor-des{
+  .accordion-item{
+    margin-bottom: 1rem;
+    
+    button{
+      font-size: 15px;
+      &:focus, &:active{
+        box-shadow: none;
+
+      }
+    }
+    .accordion-body{
+      font-size: 14px;
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+}
