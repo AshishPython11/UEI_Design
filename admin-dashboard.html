@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gyansetu | Dashboard</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+    <script src="assets/js/pace.min.js"></script>
+
+    <link rel="stylesheet" href="assets/vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
+
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/newstyle.min.css">
+</head>
+
+<body>
+
+    <!--start header-->
+    <header class="top-header">
+        <nav class="navbar navbar-expand align-items-center gap-lg-4">
+            <div class="btn-toggle">
+                <a href="javascript:;"><i class="material-icons-outlined">menu</i></a>
+            </div>
+            <div class="search-bar flex-grow-1">
+                <div class="position-relative">
+                    <input class="form-control rounded-5 px-5 search-control d-lg-block d-none" type="text"
+                        placeholder="Search">
+                    <span
+                        class="material-icons-outlined position-absolute d-lg-block d-none ms-3 translate-middle-y start-0 top-50">search</span>
+                    <span
+                        class="material-icons-outlined position-absolute me-3 translate-middle-y end-0 top-50 search-close">close</span>
+                    <div class="search-popup p-3">
+                        <div class="card rounded-4 overflow-hidden">
+                            <div class="card-header d-lg-none">
+                                <div class="position-relative">
+                                    <input class="form-control rounded-5 px-5 mobile-search-control" type="text"
+                                        placeholder="Search">
+                                    <span
+                                        class="material-icons-outlined position-absolute ms-3 translate-middle-y start-0 top-50">search</span>
+                                    <span
+                                        class="material-icons-outlined position-absolute me-3 translate-middle-y end-0 top-50 mobile-search-close">close</span>
+                                </div>
+                            </div>
+                            <div class="card-body search-content">
+                                <p class="search-title">Recent Searches</p>
+                                <div class="d-flex align-items-start flex-wrap gap-2 kewords-wrapper">
+                                    <a href="javascript:;" class="kewords"><span>Class 10th
+                                            Science</span><i class="material-icons-outlined fs-6">search</i></a>
+                                    <a href="javascript:;" class="kewords"><span>Economics</span><i
+                                            class="material-icons-outlined fs-6">search</i></a>
+                                    <a href="javascript:;" class="kewords"><span>History of
+                                            India</span><i class="material-icons-outlined fs-6">search</i></a>
+                                    <a href="javascript:;" class="kewords"><span>First class
+                                            math</span><i class="material-icons-outlined fs-6">search</i></a>
+                                    <a href="javascript:;" class="kewords"><span>physcology</span><i
+                                            class="material-icons-outlined fs-6">search</i></a>
+                                    <a href="javascript:;" class="kewords"><span>Physics</span><i
+                                            class="material-icons-outlined fs-6">search</i></a>
+                                    <a href="javascript:;" class="kewords"><span>Class 10th
+                                            Assignments</span><i class="material-icons-outlined fs-6">search</i></a>
+                                </div>
+                                <hr>
+                                <p class="search-title">Tutorials</p>
+                                <div class="search-list d-flex flex-column gap-2">
+                                    <div class="search-list-item d-flex align-items-center gap-3">
+                                        <div class="list-icon">
+                                            <i class="material-icons-outlined fs-5">play_circle</i>
+                                        </div>
+                                        <div class>
+                                            <h5 class="mb-0 search-list-title ">Wordpress
+                                                Tutorials</h5>
+                                        </div>
+                                    </div>
+                                    <div class="search-list-item d-flex align-items-center gap-3">
+                                        <div class="list-icon">
+                                            <i class="material-icons-outlined fs-5">shopping_basket</i>
+                                        </div>
+                                        <div class>
+                                            <h5 class="mb-0 search-list-title">eCommerce
+                                                Website Tutorials</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-list-item d-flex align-items-center gap-3">
+                                        <div class="list-icon">
+                                            <i class="material-icons-outlined fs-5">laptop</i>
+                                        </div>
+                                        <div class>
+                                            <h5 class="mb-0 search-list-title">Responsive
+                                                Design</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav gap-1 nav-right-links align-items-center">
+                <li class="nav-item d-lg-none mobile-search-btn">
+                    <a class="nav-link" href="javascript:;"><i class="material-icons-outlined">search</i></a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                    <button class="btn btn-primary rounded-pill px-lg-4">New
+                        Chat</button>
+                </li>
+                <li class="nav-item">
+                    <div class="toggle-mode nav-link" role="button">
+                        <i class="material-icons-outlined">dark_mode</i>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="avascript:;"
+                        data-bs-toggle="dropdown"><img src="assets/images/county/02.png" width="22" alt>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    src="assets/images/county/01.png" width="20" alt><span
+                                    class="ms-2">English</span></a>
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    src="assets/images/county/02.png" width="20" alt><span
+                                    class="ms-2">Catalan</span></a>
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    src="assets/images/county/03.png" width="20" alt><span
+                                    class="ms-2">French</span></a>
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    src="assets/images/county/04.png" width="20" alt><span
+                                    class="ms-2">Belize</span></a>
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    src="assets/images/county/05.png" width="20" alt><span
+                                    class="ms-2">Colombia</span></a>
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    src="assets/images/county/06.png" width="20" alt><span
+                                    class="ms-2">Spanish</span></a>
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    src="assets/images/county/07.png" width="20" alt><span
+                                    class="ms-2">Georgian</span></a>
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+                                    src="assets/images/county/08.png" width="20" alt><span class="ms-2">Hindi</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                        data-bs-auto-close="outside" data-bs-toggle="dropdown" href="javascript:;"><i
+                            class="material-icons-outlined">notifications</i>
+                        <span class="badge-notify">5</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-notify dropdown-menu-end shadow">
+                        <div class="px-3 py-1 d-flex align-items-center justify-content-between border-bottom">
+                            <h5 class="notiy-title mb-0">Notifications</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle dropdown-toggle-nocaret option"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="material-icons-outlined">
+                                        more_vert
+                                    </span>
+                                </button>
+                                <div class="dropdown-menu dropdown-option dropdown-menu-end shadow">
+                                    <div><a class="dropdown-item d-flex align-items-center gap-2 py-2"
+                                            href="javascript:;"><i
+                                                class="material-icons-outlined fs-6">inventory_2</i>Archive
+                                            All</a>
+                                    </div>
+                                    <div><a class="dropdown-item d-flex align-items-center gap-2 py-2"
+                                            href="javascript:;"><i class="material-icons-outlined fs-6">done_all</i>Mark
+                                            all as read</a></div>
+                                    <div><a class="dropdown-item d-flex align-items-center gap-2 py-2"
+                                            href="javascript:;"><i
+                                                class="material-icons-outlined fs-6">mic_off</i>Disable
+                                            Notifications</a></div>
+                                    <div><a class="dropdown-item d-flex align-items-center gap-2 py-2"
+                                            href="javascript:;"><i class="material-icons-outlined fs-6">grade</i>What's
+                                            new ?</a></div>
+                                    <div>
+                                        <hr class="dropdown-divider">
+                                    </div>
+                                    <div><a class="dropdown-item d-flex align-items-center gap-2 py-2"
+                                            href="javascript:;"><i
+                                                class="material-icons-outlined fs-6">leaderboard</i>Reports</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notify-list">
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class>
+                                            <img src="assets/images/profile.png" class="rounded-circle" width="45"
+                                                height="45" alt>
+                                        </div>
+                                        <div class>
+                                            <h5 class="notify-title">Congratulations
+                                                Jhon</h5>
+                                            <p class="mb-0 notify-desc">Many
+                                                congtars jhon. You have won
+                                                the gifts.</p>
+                                            <p class="mb-0 notify-time">Today</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="user-wrapper bg-primary text-primary bg-opacity-10">
+                                            <span>RS</span>
+                                        </div>
+                                        <div class>
+                                            <h5 class="notify-title">New
+                                                Account Created</h5>
+                                            <p class="mb-0 notify-desc">From
+                                                USA an user has
+                                                registered.</p>
+                                            <p class="mb-0 notify-time">Yesterday</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class>
+                                            <img src="assets/images/apps/13.png" class="rounded-circle" width="45"
+                                                height="45" alt>
+                                        </div>
+                                        <div class>
+                                            <h5 class="notify-title">Payment
+                                                Recived</h5>
+                                            <p class="mb-0 notify-desc">New
+                                                payment recived
+                                                successfully</p>
+                                            <p class="mb-0 notify-time">1d
+                                                ago</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class>
+                                            <img src="assets/images/apps/14.png" class="rounded-circle" width="45"
+                                                height="45" alt>
+                                        </div>
+                                        <div class>
+                                            <h5 class="notify-title">New
+                                                Order Recived</h5>
+                                            <p class="mb-0 notify-desc">Recived
+                                                new order from michle</p>
+                                            <p class="mb-0 notify-time">2:15
+                                                AM</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item border-bottom py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class>
+                                            <img src="assets/images/avatars/06.png" class="rounded-circle" width="45"
+                                                height="45" alt>
+                                        </div>
+                                        <div class>
+                                            <h5 class="notify-title">Congratulations
+                                                Jhon</h5>
+                                            <p class="mb-0 notify-desc">Many
+                                                congtars jhon. You have won
+                                                the gifts.</p>
+                                            <p class="mb-0 notify-time">Today</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="dropdown-item py-2" href="javascript:;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="user-wrapper bg-danger text-danger bg-opacity-10">
+                                            <span>PK</span>
+                                        </div>
+                                        <div class>
+                                            <h5 class="notify-title">New
+                                                Account Created</h5>
+                                            <p class="mb-0 notify-desc">From
+                                                USA an user has
+                                                registered.</p>
+                                            <p class="mb-0 notify-time">Yesterday</p>
+                                        </div>
+                                        <div class="notify-close position-absolute end-0 me-3">
+                                            <i class="material-icons-outlined fs-6">close</i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="javascrpt:;" class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+                        <img src="assets/images/profile.png" class="rounded-circle p-1 border" width="45" height="45"
+                            alt>
+                    </a>
+                    <div class="dropdown-menu dropdown-user dropdown-menu-end shadow">
+                        <a class="dropdown-item  gap-2 py-2" href="javascript:;">
+                            <div class="text-center">
+                                <img src="assets/images/profile.png" class="rounded-circle p-1 shadow mb-3" width="90"
+                                    height="90" alt>
+                                <h5 class="user-name mb-0 fw-bold">Hello,
+                                    Amit</h5>
+                            </div>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="profile.html"><i
+                                class="material-icons-outlined">person_outline</i>Profile</a>
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+                                class="material-icons-outlined">local_bar</i>Setting</a>
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="dashboard.html"><i
+                                class="material-icons-outlined">dashboard</i>Dashboard</a>
+
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+                                class="material-icons-outlined">power_settings_new</i>Logout</a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <!--end top header-->
+
+    <!--start sidebar-->
+    <aside class="sidebar-wrapper" data-simplebar="true">
+        <div class="sidebar-header">
+            <div class="logo-icon">
+                <img src="assets/images/logo-white.svg" class="logo-img" alt>
+            </div>
+            <div class="logo-name flex-grow-1">
+                <h5 class="mb-0">Gyansetu</h5>
+            </div>
+            <div class="sidebar-close">
+                <span class="material-icons-outlined">close</span>
+            </div>
+        </div>
+        <div class="sidebar-nav">
+            <!--navigation-->
+            <ul class="metismenu" id="sidenav">
+                <li>
+                    <a href="cards.html">
+                        <div class="parent-icon"><i class="material-icons-outlined">home</i></div>
+                        <div class="menu-title">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="chat.html">
+                        <div class="parent-icon"><i class="material-icons-outlined">chat</i></div>
+                        <div class="menu-title">Chat with AI</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="study.html">
+                        <div class="parent-icon"><i class="material-icons-outlined">local_library</i></div>
+                        <div class="menu-title">Study Materials</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="feedback.html">
+                        <div class="parent-icon"><i class="material-icons-outlined">info</i></div>
+                        <div class="menu-title">Feedback</div>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="javascript:;" class="has-arrow">
+                        <div class="parent-icon"><i class="material-icons-outlined">home</i>
+                        </div>
+                        <div class="menu-title">Dashboard</div>
+                    </a>
+                    <ul>
+                        <li><a href="index.html"><i class="material-icons-outlined">arrow_right</i>Analysis</a>
+                        </li>
+                        <li><a href="index2.html"><i class="material-icons-outlined">arrow_right</i>eCommerce</a>
+                        </li>
+                    </ul>
+                </li> -->
+
+                <!-- <li class="menu-label">UI Elements</li> -->
+
+            </ul>
+            <!--end navigation-->
+        </div>
+    </aside>
+    <!--end sidebar-->
+
+    <!--start main wrapper-->
+    <main class="main-wrapper">
+        <div class="main-content">
+            <!--breadcrumb-->
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="breadcrumb-title pe-3">Dashboard</div>
+                <div class="ps-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Report</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="ms-auto">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-lg-4"
+                            data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">Settings</button>
+
+                    </div>
+                </div>
+            </div>
+            <!--end breadcrumb-->
+
+            <div class="row">
+
+                <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+                    <div class="card rounded-4 w-100">
+                        <div class="card-body">
+                            <div class="mb-3 d-flex align-items-center justify-content-between">
+                                <div
+                                    class="wh-42 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 text-primary">
+                                    <span class="material-icons-outlined fs-5">perm_contact_calendar</span>
+                                </div>
+                                <div>
+                                    <span class="text-success d-flex align-items-center">+24%<i
+                                            class="material-icons-outlined">expand_less</i></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="mb-0">10000</h4>
+                                <p class="mb-0">Total Students</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+                    <div class="card rounded-4 w-100">
+                        <div class="card-body">
+                            <div class="mb-3 d-flex align-items-center justify-content-between">
+                                <div
+                                    class="wh-42 d-flex align-items-center justify-content-center rounded-circle bg-success bg-opacity-10 text-success">
+                                    <span class="material-icons-outlined fs-5">person_add</span>
+                                </div>
+                                <div>
+                                    <span class="text-success d-flex align-items-center">+14%<i
+                                            class="material-icons-outlined">expand_less</i></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="mb-0">1500</h4>
+                                <p class="mb-0">New Students</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+                    <div class="card rounded-4 w-100">
+                        <div class="card-body">
+                            <div class="mb-3 d-flex align-items-center justify-content-between">
+                                <div
+                                    class="wh-42 d-flex align-items-center justify-content-center rounded-circle bg-info bg-opacity-10 text-info">
+                                    <span class="material-icons-outlined fs-5">currency_rupee</span>
+                                </div>
+                                <div>
+                                    <span class="text-danger d-flex align-items-center">-35%<i
+                                            class="material-icons-outlined">expand_less</i></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="mb-0">189K</h4>
+                                <p class="mb-0">Fees Collection</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+                    <div class="card rounded-4 w-100">
+                        <div class="card-body">
+                            <div class="mb-3 d-flex align-items-center justify-content-between">
+                                <div
+                                    class="wh-42 d-flex align-items-center justify-content-center rounded-circle bg-warning bg-opacity-10 text-warning">
+                                    <span class="material-icons-outlined fs-5">library_books</span>
+                                </div>
+                                <div>
+                                    <span class="text-success d-flex align-items-center">+18%<i
+                                            class="material-icons-outlined">expand_less</i></span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="mb-0">65</h4>
+                                <p class="mb-0">Total Coures</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-6">
+                    <div class="card rounded-4">
+                        <div class="card-header py-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5 class="mb-0">School Performance</h5>
+                                <div class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle-nocaret options dropdown-toggle"
+                                        data-bs-toggle="dropdown">
+                                        <span class="material-icons-outlined fs-5">more_vert</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+                                        <li><a class="dropdown-item" href="javascript:;">Another
+                                                action</a></li>
+                                        <li><a class="dropdown-item" href="javascript:;">Something
+                                                else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container1">
+                                <canvas id="chart1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6">
+                    <div class="card">
+                        <div class="card-header py-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5 class="mb-0">School Overview</h5>
+                                <div class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle-nocaret options dropdown-toggle"
+                                        data-bs-toggle="dropdown">
+                                        <span class="material-icons-outlined fs-5">more_vert</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+                                        <li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+                                        <li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container1">
+                                <canvas id="chart2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xxl-12 d-flex align-items-stretch">
+                    <div class="card w-100 rounded-4">
+                      <div class="card-body">
+                       <div class="d-flex align-items-start justify-content-between mb-3">
+                          <div class="">
+                            <h5 class="mb-0">Teacher Details</h5>
+                          </div>
+                          <div class="dropdown">
+                            <a href="javascript:;" class="dropdown-toggle-nocaret options dropdown-toggle"
+                              data-bs-toggle="dropdown">
+                              <span class="material-icons-outlined fs-5">more_vert</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+                              <li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+                              <li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="order-search position-relative my-3">
+                          <input class="form-control rounded-5 px-5" type="text" placeholder="Search">
+                          <span class="material-icons-outlined position-absolute ms-3 translate-middle-y start-0 top-50">search</span>
+                        </div>
+                         <div class="table-responsive">
+                             <table class="table align-middle">
+                               <thead>
+                                <tr>
+                                  <th>Item Name</th>
+                                  <th>Amount</th>
+                                  <th>Vendor</th>
+                                  <th>Status</th>
+                                  <th>Rating</th>
+                                </tr>
+                               </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-3">
+                                         <div class="">
+                                            <img src="assets/images/top-products/01.png" class="rounded-circle" width="50" height="50" alt="">
+                                         </div>
+                                         <p class="mb-0">Sports Shoes</p>
+                                      </div>
+                                    </td>
+                                    <td>$149</td>
+                                    <td>Julia Sunota</td>
+                                    <td><p class="dash-lable mb-0 bg-success bg-opacity-10 text-success rounded-2">Completed</p></td>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-1">
+                                        <p class="mb-0">5.0</p>
+                                        <i class="material-icons-outlined text-warning fs-6">star</i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-3">
+                                         <div class="">
+                                            <img src="assets/images/top-products/02.png" class="rounded-circle" width="50" height="50" alt="">
+                                         </div>
+                                         <p class="mb-0">Goldan Watch</p>
+                                      </div>
+                                    </td>
+                                    <td>$168</td>
+                                    <td>Julia Sunota</td>
+                                    <td><p class="dash-lable mb-0 bg-success bg-opacity-10 text-success rounded-2">Completed</p></td>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-1">
+                                        <p class="mb-0">5.0</p>
+                                        <i class="material-icons-outlined text-warning fs-6">star</i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-3">
+                                         <div class="">
+                                            <img src="assets/images/top-products/03.png" class="rounded-circle" width="50" height="50" alt="">
+                                         </div>
+                                         <p class="mb-0">Men Polo Tshirt</p>
+                                      </div>
+                                    </td>
+                                    <td>$124</td>
+                                    <td>Julia Sunota</td>
+                                    <td><p class="dash-lable mb-0 bg-warning bg-opacity-10 text-warning rounded-2">Pending</p></td>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-1">
+                                        <p class="mb-0">4.0</p>
+                                        <i class="material-icons-outlined text-warning fs-6">star</i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-3">
+                                         <div class="">
+                                            <img src="assets/images/top-products/04.png" class="rounded-circle" width="50" height="50" alt="">
+                                         </div>
+                                         <p class="mb-0">Blue Jeans Casual</p>
+                                      </div>
+                                    </td>
+                                    <td>$289</td>
+                                    <td>Julia Sunota</td>
+                                    <td><p class="dash-lable mb-0 bg-success bg-opacity-10 text-success rounded-2">Completed</p></td>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-1">
+                                        <p class="mb-0">3.0</p>
+                                        <i class="material-icons-outlined text-warning fs-6">star</i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-3">
+                                         <div class="">
+                                            <img src="assets/images/top-products/06.png" class="rounded-circle" width="50" height="50" alt="">
+                                         </div>
+                                         <p class="mb-0">Fancy Shirts</p>
+                                      </div>
+                                    </td>
+                                    <td>$389</td>
+                                    <td>Julia Sunota</td>
+                                    <td><p class="dash-lable mb-0 bg-danger bg-opacity-10 text-danger rounded-2">Canceled</p></td>
+                                    <td>
+                                      <div class="d-flex align-items-center gap-1">
+                                        <p class="mb-0">2.0</p>
+                                        <i class="material-icons-outlined text-warning fs-6">star</i>
+                                      </div>
+                                    </td>
+                                  </tr>
+        
+                                </tbody>
+                             </table>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+        </div>
+    </main>
+    <!--end main wrapper-->
+
+    <!--start overlay-->
+    <div class="overlay btn-toggle"></div>
+    <!--end overlay-->
+
+    <!--start footer-->
+    <footer class="page-footer">
+        <p class="mb-0">Copyright © 2024. All right reserved.</p>
+    </footer>
+    <!--end footer-->
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="staticBackdrop">
+        <div class="offcanvas-header border-bottom h-70">
+            <div class>
+                <h5 class="mb-0">Theme Customizer</h5>
+                <p class="mb-0">Customize your theme</p>
+            </div>
+            <a href="javascript:;" class="primaery-menu-close" data-bs-dismiss="offcanvas">
+                <i class="material-icons-outlined">close</i>
+            </a>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <p>Theme variation</p>
+
+                <div class="row g-3">
+                    <div class="col-12 col-xl-6">
+                        <input type="radio" class="btn-check" name="theme-options" id="BlueTheme">
+                        <label
+                            class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+                            for="BlueTheme">
+                            <span class="material-icons-outlined">contactless</span>
+                            <span>Blue</span>
+                        </label>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <input type="radio" class="btn-check" name="theme-options" id="LightTheme" checked>
+                        <label
+                            class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+                            for="LightTheme">
+                            <span class="material-icons-outlined">light_mode</span>
+                            <span>Light</span>
+                        </label>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <input type="radio" class="btn-check" name="theme-options" id="DarkTheme">
+                        <label
+                            class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+                            for="DarkTheme">
+                            <span class="material-icons-outlined">dark_mode</span>
+                            <span>Dark</span>
+                        </label>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <input type="radio" class="btn-check" name="theme-options" id="SemiDarkTheme">
+                        <label
+                            class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+                            for="SemiDarkTheme">
+                            <span class="material-icons-outlined">contrast</span>
+                            <span>Semi Dark</span>
+                        </label>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <input type="radio" class="btn-check" name="theme-options" id="BoderedTheme">
+                        <label
+                            class="btn btn-outline-secondary d-flex flex-column gap-1 align-items-center justify-content-center p-4"
+                            for="BoderedTheme">
+                            <span class="material-icons-outlined">border_style</span>
+                            <span>Bordered</span>
+                        </label>
+                    </div>
+                </div><!--end row-->
+
+            </div>
+        </div>
+    </div>
+    <!--start switcher-->
+    <!--bootstrap js-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!--vendors-->
+    <script src="assets/js/jquery.min.js"></script>
+    <!--vendors-->
+    <script src="assets/vendors/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="assets/vendors/metismenu/metisMenu.min.js"></script>
+    <script src="assets/vendors/chartjs/js/chart.js"></script>
+    <script src="assets/vendors/chartjs/js/chartjs-custom.js"></script>
+    <script src="assets/vendors/simplebar/js/simplebar.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
